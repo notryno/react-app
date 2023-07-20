@@ -2,10 +2,12 @@ import React, { useState } from "react";
 import LoginImage from "../assets/svgs/login-illustration.svg";
 import { useNavigate } from "react-router-dom";
 import { TextInput } from "../components/TextInput";
+import { Button } from "../components/Button";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+
   const navigate = useNavigate();
 
   const onLogin = () => {
@@ -21,10 +23,8 @@ export const Login = () => {
             <TextInput
               type="text"
               placeholder="Username"
-              onTextChange={(text) => {
-                setUsername(text);
-              }}
               value={username}
+              onTextChange={(text) => setUsername(text)}
             />
             <TextInput
               type="password"
@@ -34,9 +34,7 @@ export const Login = () => {
               }}
               value={password}
             />
-            <button style={styles.button} onClick={onLogin}>
-              Login
-            </button>
+            <Button style={styles.button} onClick={onLogin} label={"Login"} />
             <div style={{ marginTop: 20 }}>
               <div style={{ textAlign: "center", marginTop: 10 }}>
                 Don't have an account?
@@ -75,7 +73,6 @@ const styles = {
   },
   loginFormContainer: {
     display: "flex",
-    flexDirection: "column",
     flex: 1,
     padding: "40px",
     height: "100%",
