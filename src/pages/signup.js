@@ -2,7 +2,6 @@ import React from "react";
 import SignupImage from "../assets/svgs/signup-illustration.svg";
 import { useNavigate } from "react-router-dom";
 import { TextInput } from "../components/TextInput";
-import Card from "../components/Card";
 
 export const Signup = () => {
   const navigate = useNavigate();
