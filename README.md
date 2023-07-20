@@ -5,7 +5,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 ## To run the project
 
 Clone the git repo using ssh.
-git clone <SSH-LINK>
+git clone <SSH-LINK> or <HHTPS Link>
 
 ## Run the following command:
 
